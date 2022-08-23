@@ -1,4 +1,5 @@
 import logo from './Images/logototus-ppal.png';
+import CartWidget from './CartWidget.js' 
 
 
 const NavBar = () => {
@@ -17,7 +18,7 @@ return (
     crossOrigin="anonymous"
   />
   <nav
-    className="navbar navbar-expand-lg navbar-light px-0 fixed-top"
+    className="navbar navbar-expand-lg navbar-light px-0"
     style={{backgroundColor: "#e1ceb2"}}
   >
     <div className="container-fluid">
@@ -132,6 +133,8 @@ return (
               Catálogo
             </a>
           </li>
+         <CartWidget />
+
         </ul>
       </div>
     </div>
