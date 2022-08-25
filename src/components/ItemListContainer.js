@@ -1,8 +1,8 @@
 
-const saludo = ({greeting}) => (
+const ItemListContainer = ({greeting}) => (
     <div>
         <h2>{greeting}</h2>
     </div>
 )
   
-  export default saludo;
+  export default ItemListContainer;

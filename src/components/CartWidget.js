@@ -1,7 +1,7 @@
 import carrito from './Images/carrito1.png';
 
 
-const cart = () => {
+const CartWidget = () => {
 
 return (
 <li className="nav-item px-3">
@@ -12,4 +12,4 @@ return (
 </li>
 )}
 
-export default cart;
+export default CartWidget;
