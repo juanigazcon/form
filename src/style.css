@@ -74,92 +74,27 @@ h2{
     animation: zoomIn;
     animation-duration: 1s;
 }
-h3{
-    font-weight: bold; 
-    color:rgb(121, 66, 69);
-    font-family: "lexend";
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-h3 a{
-    text-decoration: none;
-    color: rgb(121, 66, 69);
-}
 p{
-    text-align: justify;
     color:dimgray;
     font-family: "lexend";
     animation: zoomIn;
     animation-duration: 1s;
+    font-weight: bolder;
+    margin-left: 3% ;
 }
-.recetas{
-    border: 1px solid rgb(121, 66, 69);
+.buttonContainer{
+    align-self: center;
 }
-.recipe__ingredients--list{
-    line-height: 200%;
+.button {
     font-family: "lexend";
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     color: dimgray;
-}
-/* ul{
-    list-style-image: url("../Images/recetas/spoon.png");
-}  */
-h4{
-    color: rgb(121, 66, 69);
-    font-family: "lexend";
-}
-.producto{
-    border: solid 2px rgb(121, 66, 69);
-}
-.display1{
-    animation: fadeInLeft;
-    animation-duration: 1s;
-}
-.display2{
-    animation: fadeInRight;
-    animation-duration: 1s;
-}
-ol{
-    color:dimgray;
-    font-family: "lexend";
-    font-size: 95%;
-    line-height: 220%;
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-h4{
-    background-color: rgb(121, 66, 69);
-    color:rgb(221, 183, 149);
-    font-family: "lexend";
-    line-height: 200%;
-    font-size: 100%;
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-h5{
-    background-color: rgba(121, 66, 69,0.8);
-    color:rgb(221, 183, 149);
-    font-family: "lexend";
     font-weight: bold;
-}
-h5 a{
+    background-color: #e1ceb2;
+    border: solid 2px #e1ceb2;
+    border-radius: 4px;
     text-decoration: none;
-    color:rgb(221, 183, 149);
-}
-h6{
-    color: rgb(121, 66, 69);
-    font-family: "lexend";
-    font-size: 130%;
-}
-h7{
-    color: rgb(121, 66, 69);
-    font-family: "lexend";
-    font-size: 90%;
-}
-footer{
-    background-color: rgb(221, 183, 149);
-}
-@media screen and (max-width:767px){
-    .border{
-        padding-top: 55%;
-    }
-}
+  }
