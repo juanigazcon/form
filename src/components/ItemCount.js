@@ -4,7 +4,7 @@ const ItemCount = ({stock, initial, cantidadAgregada}) => {
 	const [counter, setCounter] = useState(initial);
 
 	const aumentarCantidad = () => {
-        if (counter<stock){
+        if (counter-initial < stock){
 		setCounter((cantItems) => cantItems +1);
         stock = stock --;
     }
