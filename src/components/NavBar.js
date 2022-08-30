@@ -22,7 +22,7 @@ return (
     style={{backgroundColor: "#e1ceb2"}}
   >
     <div className="container-fluid">
-      <a className="navbar-brand col-md-2" href="#">
+      <a className="navbar-brand col-md-2" href="#top">
         <img src={logo} alt="Totus Logo" className="container-fluid" />
       </a>
       <button

@@ -59,11 +59,6 @@ ul ul li:hover{
 a{
     color: rgb(121, 66, 69);
 }
-/* .desplegable{
-    line-height: 250%;
-    font-size: 100%;
-    width: 100%;
-} */
 .border{
     padding-top: 13%;
 }
@@ -80,7 +75,6 @@ p{
     animation: zoomIn;
     animation-duration: 1s;
     font-weight: bolder;
-    margin-left: 3% ;
 }
 .buttonContainer{
     align-self: center;
@@ -98,3 +92,17 @@ p{
     border-radius: 4px;
     text-decoration: none;
   }
+  h3 {
+    font-weight: bold;
+    color: rgb(121, 66, 69);
+    font-family: "lexend";
+    font-size: 140%;
+    font-weight: bolder;
+  }
+  .tortas {
+    border: solid 1px rgb(121, 66, 69);
+  }
+ /*  .margin{
+    padding-top: 2%;
+  }
+ */

@@ -12,7 +12,7 @@ function App() {
     <div>
     <NavBar/>
     </div>
-    <ItemListContainer greeting='Buen día'/>
+    <ItemListContainer/>
     </div>
   );
 }
