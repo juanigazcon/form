@@ -6,10 +6,10 @@ const ItemList = ({productList}) =>{
 
 
     return(
-    <div>
-        {
+        <div className='tortas px-0 mx-0'>
+         {
         productList.map(item => 
-        <Item 
+        <Item
             key={item.id} 
             imagen={item.image} 
             nombre={item.nombre} 
@@ -19,6 +19,7 @@ const ItemList = ({productList}) =>{
     )         
     }
     </div>
+    
 
     )
 }

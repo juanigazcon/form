@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid__main{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "space space"
+    "title title"
+    "tortas tortas"
+    "footer footer";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto auto auto;
+    width:100%;
+}
+html{
+    scroll-behavior:smooth;
+}
+nav ul{
+    font-family: "lexend";
+    background-color:rgb(225, 206, 178);
+    color:rgb(121, 66, 69);
+    font-weight:bolder;
+    line-height: 50px;
+    font-size: 110%;
+    z-index: 3;
+}
+nav ul a{
+    color:rgb(121, 66, 69);
+}
+#color{
+    color:rgb(121, 66, 69);
+}
+li{
+    position: relative;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(121, 66, 69);
+}
+ul ul{
+    position: absolute;
+    display: none;
+}
+ul .header__productos li{
+    display: block;
+    background-color:rgb(221, 183, 149);
+    color: rgb(121, 66, 69);
+    font-size: 100%;
+    width: 180%;
+    padding: 10% 10% 10% 10%;
+    margin-left: -20%;
+    z-index: 4;
+    transition: background-color 0.25s;
+}
+ul .header__recetas li{
+    display: block;
+    background-color:rgb(221, 183, 149);
+    color: rgb(121, 66, 69);
+    font-size: 100%;
+    width: 200%;
+    padding: 10% 10% 10% 10%;
+    margin-left: -20%;
+    z-index: 4;
+    transition: background-color 0.25s;
+}
+ul li:hover ul{
+    display: block;
+}
+ul ul li:hover{
+    background-color: rgb(180, 154, 127);
+}
+a{
+    color: rgb(121, 66, 69);
+}
+.title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+h2{
+    font-weight: bolder; 
+    color:rgb(121, 66, 69);
+    font-family: "lexend";
+    font-size: 200%;
+    margin-bottom: 3%;
+
+}
+.aside{
+    grid-area: aside;
+    animation: slideInLeft;
+    animation-duration: 1s;
+}
+.productos__menu{
+    list-style: none;
+    font-family: "lexend";
+    font-weight: bold;
+    color: dimgray;
+    line-height: 300%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.aside ul li a{
+    text-decoration: none;
+    color: dimgray;
+    font-size: 110%;
+}
+.tortas{
+    animation: slideInUp;
+    animation-duration: 1s;
+    grid-area: tortas;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 4%;
+    column-gap: 4%;
+    margin-right: 5%;
+ }
+ .products{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .products__pictures{
+     width:90%;
+     border: 1px rgb(121, 66, 69) solid;
+ }
+ h3{
+    font-weight: bold; 
+    color:rgb(121, 66, 69);
+    font-family: "lexend";
+    font-size: 120%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+h3 a{
+    text-decoration: none;
+    color: rgb(121, 66, 69);
+}
+p{
+    color:dimgray;
+    font-family: "lexend";
+    animation: zoomIn;
+    animation-duration: 1s;
+    font-weight: bolder;
+    font-size: 100%;
+}
+.button {
+    font-family: "lexend";
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: dimgray;
+    font-weight: bold;
+    background-color: #e1ceb2;
+    border: solid 2px #e1ceb2;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;  
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.content{
+    grid-area: content;
+    margin-top: 2%;
+   /*  border: orange solid 2px; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+.productos__image--display{
+    width:60%;
+    justify-self: center;
+    margin-left: 40%;
+    animation: fadeInLeft;
+    animation-duration: 1s;
+}
+.productos__image{
+    width:100%;
+    border:2px rgb(121, 66, 69) solid;
+}
+.productos__detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; 
+    color:dimgray;
+    font-family: "lexend";
+    font-size: 100%;
+    line-height: 250%;
+    margin-right: 40%; 
+    margin-left: 20%;
+    text-align: justify; 
+}

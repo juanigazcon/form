@@ -46,63 +46,18 @@ return (
               id="color"
               href="../index.html"
             >
-              Inicio
+              Productos
             </a>
           </li>
           <li className="nav-item px-3">
             <a className="nav-link px-3" href="productos.html" id="color">
-              {" "} Productos{" "}
+              {" "}Clásicas{" "}
             </a>
-            <ul
-              className="px-3 header__productos"
-              style={{backgroundColor: "#d4b795"}}
-            >
-              <li className="desplegable">
-                <a href="tortas-clasicas.html" id="color">
-                  Tortas Clásicas
-                </a>
-              </li>
-              <li className="desplegable">
-                <a href="tortas-frutales.html" id="color">
-                  Tortas Frutales
-                </a>
-              </li>
-              <li className="desplegable">
-                <a href="tortas-golosas.html" id="color">
-                  Tortas Golosas
-                </a>
-              </li>
-              <li className="desplegable">
-                <a href="tortas-tematicas.html" id="color">
-                  Tortas Temáticas
-                </a>
-              </li>
-              <li className="desplegable">
-                <a href="bocados.html" id="color">
-                  Bocados
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="nav-item px-3">
             <a className="nav-link px-3" href="recetas.html" id="color">
-              {" "} Recetas{" "}
+              {" "} Frutales{" "}
             </a>
-            <ul
-              className="px-3 header__recetas"
-              style={{backgroundColor: "#d4b795"}}
-            >
-              <li className="desplegable">
-                <a href="turron.html" id="color">
-                  Turrón de Avena
-                </a>
-              </li>
-              <li className="desplegable">
-                <a href="budin.html" id="color">
-                  Budín de Limón
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="nav-item px-3">
             <a
@@ -110,7 +65,7 @@ return (
               href="../index.html#sobretotus"
               id="color"
             >
-              Sobre Totus
+              Golosas
             </a>
           </li>
           <li className="nav-item px-3">
@@ -119,7 +74,7 @@ return (
               href="../index.html#contacto"
               id="color"
             >
-              Contacto
+              Temáticas
             </a>
           </li>
           <li className="nav-item px-3">
@@ -130,7 +85,7 @@ return (
               download="Catálogo Totus"
               id="color"
             >
-              Catálogo
+              Bocados
             </a>
           </li>
          <CartWidget />

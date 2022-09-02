@@ -75,6 +75,7 @@ p{
     animation: zoomIn;
     animation-duration: 1s;
     font-weight: bolder;
+    font-size: 150%;
 }
 .buttonContainer{
     align-self: center;

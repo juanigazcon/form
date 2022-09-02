@@ -1,8 +1,8 @@
 import './App.css';
 
 import NavBar from './components/NavBar';
-import './style.css';
 import ItemListContainer from './components/ItemListContainer'
+import './estilos.css';
 
 
 
