@@ -1,5 +1,4 @@
 import carrito from './Images/carrito1.png';
-/* import ItemCount from './ItemCount.js'; */
 
 
 const CartWidget = () => {

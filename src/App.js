@@ -6,14 +6,15 @@ import './estilos.css';
 
 
 
+
 function App() {
+
   return (
     <div>
-    <div>
-    <NavBar/>
+    <NavBar />
+    <ItemListContainer />
     </div>
-    <ItemListContainer/>
-    </div>
+
   );
 }
 

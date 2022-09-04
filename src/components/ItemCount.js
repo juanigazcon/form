@@ -27,10 +27,10 @@ const ItemCount = ({stock, initial, cantidadAgregada}) => {
 
 return (
     <div className="container col-md-4 d-flex flex-column align-items-center pt-4 py-3">
-    <div className="container col-md-4 d-flex flex-row align-items-center px-0" >
+    <div className="container col-md-4 d-flex flex-row justify-content-center px-0" >
       <p>Counter {counter}</p>
     </div>
-    <div className="container col-md-6 d-flex flex-row align-items-center px-0">
+    <div className="container col-md-6 d-flex flex-row justify-content-center px-0">
       <button onClick={disminuirCantidad} className="button">-</button>
       <button onClick={agregarUnidades} className="button">Agregar al carrito</button>
       <button onClick={aumentarCantidad} className="button">+</button>
