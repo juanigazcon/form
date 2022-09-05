@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Totus Pastelería
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Totus Pastelería es el emprendimiento de una amiga muy cercana, donde combina su pasatiempo de cocinar con su trabajo como administradora de empresas.
 
-## Available Scripts
+## Qué significa Totus Pastelería
 
-In the project directory, you can run:
+Totus es una pastelería que busca la excelencia en calidad tanto en la presentación como en el sabor del producto final.
+No solo es importante el producto logrado, sino las personas que lo logran. Es por eso que en Totus se valora a cada persona como única, que busca dignificarse con su trabajo diario
+Su significado proviene de la oración de consagración a la Virgen María de San Luis María de Monfort, Totus tuus ego sum, María. Buscando así un sentido trascendental a cada minuto de trabajo dedicado a cada producto que sale de esa pastelería. 
 
-### `npm start`
+### Objetivos del proyecto- negocio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El sitio web de Totus Pastelería pretende actuar como canal de difusión para que el público conozca los productos que ofrece. 
+Tanto la gama de colores como las fotografías, la tipografía y los textos fueron cuidadosamente seleccionados para acompañar la imagen de la marca y lo que intenta transmitir.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Objetivos del proyecto- desarrollo
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El proyecto aún se encuentra en etapa de desarrollo, es apenas una pre entrega.
+Se apunta a que cada ítem tenga su botón de agregar al carrito, que el contador del carrito sea funcional a los ítems que contiene y a que se pueda visualizar un detalle del contenido del carrito.
