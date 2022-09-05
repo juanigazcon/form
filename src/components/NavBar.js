@@ -1,5 +1,7 @@
 import logo from './Images/logototus-ppal.png';
 import CartWidget from './CartWidget.js' 
+import { Link } from 'react-router-dom';
+
 
 
 const NavBar = () => {
@@ -23,70 +25,42 @@ return (
   >
     <div className="container-fluid">
       <div>
+        <Link to='/'>
         <img src={logo} alt="Totus Logo" className="container-fluid" />
+        </Link>
         </div>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
       <div className="container col-md-1"></div>
       <div className="collapse navbar-collapse col-md-9" id="navbarNavDropdown">
         <ul className="navbar-nav menu">
           <li className="nav-item px-3">
-            <a
-              className="nav-link px-3"
-              aria-current="page"
-              id="color"
-              href="../index.html"
-            >
+           <Link to='/' className="nav-link px-3" style={{color: "#794245"}}>
               Productos
-            </a>
+            </Link>
           </li>
           <li className="nav-item px-3">
-            <a className="nav-link px-3" href="productos.html" id="color">
-              {" "}Clásicas{" "}
-            </a>
+          <Link to='/category/clasicas' className="nav-link px-3" style={{color: "#794245"}}>
+              Clásicas
+              </Link>
           </li>
           <li className="nav-item px-3">
-            <a className="nav-link px-3" href="recetas.html" id="color">
-              {" "} Frutales{" "}
-            </a>
+          <Link to='/category/frutales' className="nav-link px-3" style={{color: "#794245"}}>
+              Frutales
+              </Link>
           </li>
           <li className="nav-item px-3">
-            <a
-              className="nav-link px-3"
-              href="../index.html#sobretotus"
-              id="color"
-            >
+          <Link to='/category/golosas' className="nav-link px-3" style={{color: "#794245"}}>
               Golosas
-            </a>
+              </Link>
           </li>
           <li className="nav-item px-3">
-            <a
-              className="nav-link px-3"
-              href="../index.html#contacto"
-              id="color"
-            >
+          <Link to='/category/tematicas' className="nav-link px-3" style={{color: "#794245"}}>
               Temáticas
-            </a>
+              </Link>
           </li>
           <li className="nav-item px-3">
-            <a
-              className="nav-link px-3"
-              a=""
-              href="../Catalogo_Totus_2022.pdf"
-              download="Catálogo Totus"
-              id="color"
-            >
+          <Link to='/category/bocados' className="nav-link px-3" style={{color: "#794245"}}>
               Bocados
-            </a>
+              </Link>
           </li>
          <CartWidget />
 

@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { products } from './mock.js'
 import ItemDetail from './ItemDetail.js'
+import { useParams } from 'react-router-dom'
+import { getProductsById } from './mock.js'
 
 
 
 const ItemDetailContainer = () => {
 
     const [itemDetails, setitemDetails] = useState([])
+    const {id} = useParams();
 
 
-    const getDetails = () => new Promise ((resolve, reject) => {
-    setTimeout(()=>resolve(products), 2000)    
-    })
     
     useEffect(() => {
-    getDetails()
+    getProductsById(id)
     .then(products => setitemDetails(products))
     .catch(error => console.error(error))
     
     
-    }, [])
+    }, [id])
     
     console.log(itemDetails)
 

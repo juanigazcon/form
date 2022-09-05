@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Item = ({
+  id=0,
   nombre= 'Product',
   precio= 3000,
   stock = 10,
@@ -20,7 +22,9 @@ return (
     </h3>
     <p className="pt-1 fw-bold">Precio: ${precio}</p>
     <p className="pt-1 fw-bold">Stock disponible: {stock} unidades</p>
-    <button  className="button">Agregar al carrito</button>
+    <Link to={`/product/${id}`}>
+    <button  className="button2">Ver detalle</button>
+    </Link>
   </div>
   
 

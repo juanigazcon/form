@@ -1,10 +1,10 @@
 import React from 'react'
 
 const ItemDetail = ({
-  nombre= 'Product',
-  precio= 3000,
-  descripcion = 'Totus Pastelería',
-  imagen= 'https://luciapaula.com/wp-content/uploads/2021/04/2021-04-18-062903063-820x1024.jpg'
+  nombre,
+  precio,
+  descripcion,
+  imagen
 }) => {
 
 return (

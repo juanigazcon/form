@@ -2,40 +2,44 @@ import React, { useEffect, useState } from 'react'
 import ItemCount from './ItemCount' 
 import ItemList from './ItemList';
 import Spinner from './Spinner.js'
-import ItemDetailContainer from './ItemDetailContainer';
-import { products } from './mock.js'
-
+import { getProducts, getProductsByCategory } from './mock.js'
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = () => {
 
-    const [productList, setproductList] = useState([])
+    const [products, setProducts] = useState([]);
     const [isLoading, setisLoading] = useState(false);
+    const { categoryId } = useParams();
 
-
-
-    const getProducts = () => new Promise ((resolve, reject) => {
-    setTimeout(()=>resolve(products), 2000)    
-    })
     
     useEffect(() => {
     setisLoading(true);
+
+
+    if(!categoryId){
     getProducts()
-    .then(products => setproductList(products))
+    .then(products => setProducts(products))
     .catch(error => console.error(error))
     setisLoading(false)
-        }, [])
+    } else {
+    getProductsByCategory(categoryId)
+    .then(products => setProducts(products))
+    .catch(error => console.error(error))
+    setisLoading(false)
+    }
+
+}, [categoryId])
     
-    console.log(productList)
+    console.log(products)
 
     return(
     <div>
     <div>
     {isLoading ? <Spinner /> : <div>
     <ItemCount stock={6} initial={1} cantidadAgregada={2}/>
-    <ItemList productList={productList} />
+    <ItemList productList={products} />
     <div className='lugar'>
-    <ItemDetailContainer  />
     </div>
    </div>}
     </div>
