@@ -268,3 +268,6 @@ p{
         grid-template-columns: 20% 60% 20%;
         align-items: center;
     }
+.space{
+    margin-top: 2%;
+}
