@@ -9,7 +9,7 @@ import Spinner from './Spinner.js'
 const ItemDetailContainer = () => {
 
     const [itemDetails, setitemDetails] = useState([])
-    const [isLoading, setisLoading] = useState(false);
+    const [isLoading, setisLoading] = useState(true);
     const {id} = useParams();
     
 
@@ -17,15 +17,16 @@ const ItemDetailContainer = () => {
     
     useEffect(() => {
     setisLoading(true);
+
     getProductsById(id)
-    .then(products => setitemDetails(products))
-    .catch(error => console.error(error))
+    .then(products => {setitemDetails(products)
     setisLoading(false);
+    })
+    .catch(error => console.error(error))
+    
     
     }, [id])
     
-    console.log(itemDetails)
-
     return(
     
     <div className='mt-4'>

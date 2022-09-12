@@ -2,8 +2,6 @@ import React from 'react'
 import Item from './Item.js'
 
 const ItemList = ({productList}) =>{
-    console.log(productList)
-
 
     return(
         <div className='tortas px-0 mx-0'>

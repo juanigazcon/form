@@ -5,10 +5,11 @@ import { getProducts, getProductsByCategory } from './mock.js'
 import { useParams } from 'react-router-dom';
 
 
+
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
-    const [isLoading, setisLoading] = useState(false);
+    const [isLoading, setisLoading] = useState(true);
     const { categoryId } = useParams();
 
     
@@ -18,20 +19,20 @@ const ItemListContainer = () => {
 
     if(!categoryId){
     getProducts()
-    .then(products => setProducts(products))
-    .catch(error => console.error(error))
+    .then(products => {setProducts(products)
     setisLoading(false)
+    })
+    .catch(error => console.error(error))
     } else {
     getProductsByCategory(categoryId)
-    .then(products => setProducts(products))
-    .catch(error => console.error(error))
+    .then(products => {setProducts(products)
     setisLoading(false)
+    })
+    .catch(error => console.error(error))
     }
 
 }, [categoryId])
     
-    console.log(products)
-
     return(
     <div>
     <div>
