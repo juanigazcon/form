@@ -1,11 +1,46 @@
-import React from 'react'
+import ItemCount from './ItemCount' 
+import TextField  from '@mui/material/TextField';
+import React, { useState } from 'react';
+
+
 
 const ItemDetail = ({
   nombre,
   precio,
   descripcion,
-  imagen
+  imagen,
+  stock
 }) => {
+
+  const [value,setValues] = useState('');
+  const [hideForm, setHideForm] = useState(false);
+
+
+  const onChangeValue = (e) => {
+      if(value<=stock) {
+      console.log("hola")
+      setValues(e.target.value)
+      console.log(value)
+  }
+
+    }
+
+  
+    const onSubmit = (e) => {
+      e.preventDefault (); 
+      if(value<=stock){
+      console.log(value)
+      setHideForm(true);
+      } else{
+        setValues('');
+        alert("No hay stock suficiente para cubrir el pedido, por favor seleccione una cantidad más chica.")
+      }
+
+    }
+  
+  
+
+  
 
 return (
     <>
@@ -22,9 +57,27 @@ return (
       </div>
       <div className="productos__detalle">
         <p>Precio: ${precio}</p>
-        <p>{descripcion}</p>
+        {hideForm ? <p>Stock disponible: {stock - value} unidades</p> : <p>Stock disponible: {stock} unidades</p>}
+        <p style={{textAlign:'center'}}>{descripcion}</p>
       </div>
     </div>
+    <div  className="quantity">
+        <div></div>
+        <div>
+      {hideForm ? null :  
+      <form onSubmit={onSubmit} className="container col-md-8 d-flex flex-row justify-content-center px-0">
+      <TextField
+          className='Textfield'
+          onChange={onChangeValue}
+          value={value}
+          variant='filled'
+        />
+        <button className="button">Agregar al carrito</button>
+          </form>}
+          </div>
+          <div></div>
+        </div>
+    {hideForm ? <ItemCount cantidadAgregada={value}/> : null}
   </>
 
 

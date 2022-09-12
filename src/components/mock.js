@@ -8,7 +8,7 @@ export const products = [
         image2: "https://juanigazcon.github.io/totus-final/Images/Productos/cheesecake-2.jpg",
         category:  'clasicas',
         descripcion:"Base de galletitas con relleno de queso crema dulce. Topping de mermelada y frutos rojos. 28 cm de diámetro, rinde 15/20 porciones."
-    }, {
+}, {
         id: '2',
         nombre: "Rogel",
         precio: 3500,

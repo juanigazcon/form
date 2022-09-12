@@ -2,21 +2,25 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail.js'
 import { useParams } from 'react-router-dom'
 import { getProductsById } from './mock.js'
+import Spinner from './Spinner.js'
 
 
 
 const ItemDetailContainer = () => {
 
     const [itemDetails, setitemDetails] = useState([])
+    const [isLoading, setisLoading] = useState(false);
     const {id} = useParams();
+    
 
 
     
     useEffect(() => {
+    setisLoading(true);
     getProductsById(id)
     .then(products => setitemDetails(products))
     .catch(error => console.error(error))
-    
+    setisLoading(false);
     
     }, [id])
     
@@ -25,7 +29,7 @@ const ItemDetailContainer = () => {
     return(
     
     <div className='mt-4'>
-           {
+        { isLoading ? <Spinner /> :      
         itemDetails.map(item => 
         <ItemDetail 
             key={item.id} 
@@ -33,6 +37,7 @@ const ItemDetailContainer = () => {
             nombre={item.nombre} 
             precio={item.precio} 
             descripcion={item.descripcion}
+            stock={item.stock}
         />
     )         
     }

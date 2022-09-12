@@ -1,40 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ItemCount = ({stock, initial, cantidadAgregada}) => {
-	const [counter, setCounter] = useState(initial);
 
-	const aumentarCantidad = () => {
-        if (counter-initial < stock){
-		setCounter((cantItems) => cantItems +1);
-        stock = stock --;
-    }
-	};
+const ItemCount = ({cantidadAgregada}) => {
 
-	const disminuirCantidad = () => {
-        if(counter >= 1){
-		setCounter((cantItems) => cantItems -1);
-        stock = stock ++;
-        }
-	};
-
-    const agregarUnidades = () => {
-        if((counter<stock) && ((cantidadAgregada+(counter-initial)) <= stock)) {
-            setCounter((cantItems) => cantItems + cantidadAgregada)
-            stock = stock-cantidadAgregada;
-            console.log(stock)
-        }
-    }
 
 return (
     <div className="container col-md-4 d-flex flex-column align-items-center pt-4 py-3">
     <div className="container col-md-4 d-flex flex-row justify-content-center px-0" >
-      <p>Counter {counter}</p>
+      <p>Cantidad: {cantidadAgregada}</p>
     </div>
     <div className="container col-md-6 d-flex flex-row justify-content-center px-0">
-      <button onClick={disminuirCantidad} className="button">-</button>
-      <button onClick={agregarUnidades} className="button">Agregar al carrito</button>
-      <button onClick={aumentarCantidad} className="button">+</button>
+    <Link to='/cart' className="nav-link px-3" style={{color: "#794245"}}>
+    <button className="button">Finalizar compra</button>
+    </Link>
     </div>
+   
     </div>
 )}
 

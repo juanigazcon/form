@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ItemCount from './ItemCount' 
 import ItemList from './ItemList';
 import Spinner from './Spinner.js'
 import { getProducts, getProductsByCategory } from './mock.js'
@@ -37,7 +36,6 @@ const ItemListContainer = () => {
     <div>
     <div>
     {isLoading ? <Spinner /> : <div>
-    <ItemCount stock={6} initial={1} cantidadAgregada={2}/>
     <ItemList productList={products} />
     <div className='lugar'>
     </div>
