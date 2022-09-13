@@ -13,8 +13,6 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     
 
-
-    
     useEffect(() => {
     setisLoading(true);
 
@@ -24,6 +22,7 @@ const ItemDetailContainer = () => {
     })
     .catch(error => console.error(error))
     
+
     
     }, [id])
     

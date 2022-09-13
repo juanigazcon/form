@@ -6,10 +6,12 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import './estilos.css';
 import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import React from 'react';
+import { ItemsProvider } from './components/CartContext';
 
 function App() {
 
   return (
+    <ItemsProvider>
     <div>
       <BrowserRouter>
         <NavBar />
@@ -21,6 +23,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </ItemsProvider>
 
   );
 }

@@ -14,8 +14,10 @@ return (
     <Link to='/cart' className="nav-link px-3" style={{color: "#794245"}}>
     <button className="button">Finalizar compra</button>
     </Link>
+    <Link to='/' className="nav-link px-3" style={{color: "#794245"}}>
+    <button className="button">Seguir comprando</button>
+    </Link>
     </div>
-   
     </div>
 )}
 

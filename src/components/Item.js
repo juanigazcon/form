@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 const Item = ({
   id=0,
   nombre= 'Product',
@@ -8,7 +9,6 @@ const Item = ({
   stock = 10,
   imagen= 'https://luciapaula.com/wp-content/uploads/2021/04/2021-04-18-062903063-820x1024.jpg',
 }) => {
-
 
 return (
     <div className="products">
@@ -22,7 +22,7 @@ return (
     </h3>
     <p className="pt-1 fw-bold">Precio: ${precio}</p>
     <p className="pt-1 fw-bold">Stock disponible: {stock} unidades</p>
-    <Link to={`/product/${id}`}>
+    <Link to={`/product/${id}`} className="pt-2">
     <button  className="button2">Ver detalle</button>
     </Link>
   </div>
