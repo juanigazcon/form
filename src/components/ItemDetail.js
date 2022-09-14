@@ -19,7 +19,7 @@ const ItemDetail = ({
 
   const [value,setValues] = useState('');
   const [hideForm] = useState(false);
-  const [items, setItems] = useContext(CartContext);
+  const [items, setItems, total] = useContext(CartContext);
   const [item, setItem] = useState([])
   const {id} = useParams();
   let existe = items.some(producto => producto.id === id);
@@ -31,20 +31,21 @@ const ItemDetail = ({
   })  
   }, [id])
 
-
- 
+ console.log(item);
 
   const onChangeValue = (e) => {
       if(value<=stock) {
       setValues(e.target.value)
-      //console.log(value)
+      console.log(value)
   }
 
     }
 
      const onSubmit = (e) => {
       e.preventDefault (); 
+
       let productoElegido= item[0]
+      console.log(productoElegido)
       let productoExistenteEnCarrito = items.some(producto => producto.id === productoElegido.id);
       console.log(productoExistenteEnCarrito)
 
@@ -58,8 +59,11 @@ const ItemDetail = ({
         setItems(items)
         console.log(items)
       }
-      setValues('');
+      setValues('');  
+      
     }
+
+  
     
     const vaciarCarrito = () => {
       items.splice(0, items.length);
@@ -104,7 +108,7 @@ return (
           value={value}
           variant='filled'
         />
-        <button className="button" >Agregar al carrito</button>
+        <button className="button" onClick={()=>total()}>Agregar al carrito</button>
           </form>}
           </div>
           <div></div>

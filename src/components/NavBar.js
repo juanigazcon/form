@@ -1,6 +1,7 @@
 import logo from './Images/logototus-ppal.png';
 import CartWidget from './CartWidget.js' 
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 
 
