@@ -5,7 +5,6 @@ import { getProductsById } from './mock.js'
 import Spinner from './Spinner.js'
 
 
-
 const ItemDetailContainer = () => {
 
     const [itemDetails, setitemDetails] = useState([])
@@ -30,14 +29,10 @@ const ItemDetailContainer = () => {
     
     <div className='mt-4'>
         { isLoading ? <Spinner /> :      
-        itemDetails.map(item => 
+        itemDetails.map(prod => 
         <ItemDetail 
-            key={item.id} 
-            imagen={item.image2} 
-            nombre={item.nombre} 
-            precio={item.precio} 
-            descripcion={item.descripcion}
-            stock={item.stock}
+        key={prod.id} 
+        prod={prod}
         />
     )         
     }

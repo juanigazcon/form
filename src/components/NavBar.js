@@ -2,10 +2,13 @@ import logo from './Images/logototus-ppal.png';
 import CartWidget from './CartWidget.js' 
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { useCartContext } from './CartContext';
 
 
 
 const NavBar = () => {
+
+  const {total} = useCartContext();
 
 return (
 <header>
@@ -30,7 +33,7 @@ return (
         <img src={logo} alt="Totus Logo" className="container-fluid" />
         </Link>
         </div>
-      <div className="container col-md-1"></div>
+      <div className="container col-md-0"></div>
       <div className="collapse navbar-collapse col-md-9" id="navbarNavDropdown">
         <ul className="navbar-nav menu">
           <li className="nav-item px-3">
@@ -63,8 +66,12 @@ return (
               Bocados
               </Link>
           </li>
-         <CartWidget />
-
+          <li className="nav-item px-3">
+          <Link to='/cart' className="nav-link px-3" style={{color: "#794245"}}>
+              {total()}
+              <CartWidget />
+          </Link>
+          </li>
         </ul>
       </div>
     </div>

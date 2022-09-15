@@ -1,22 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import {useState} from 'react';
 
 
-const ItemCount = ({cantidadAgregada}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
+const[counter, setCounter] = useState(initial)
 
+const agregarUnidad =()=>{
+  counter < stock ? setCounter(counter+1) : alert("No hay stock suficiente")      
+}
+
+const quitarUnidad =()=>{
+  if(counter > initial) setCounter(counter - 1)
+} 
 
 return (
-    <div className="container col-md-4 d-flex flex-column align-items-center pt-4 py-3">
-    <div className="container col-md-4 d-flex flex-row justify-content-center px-0" >
-      <p>Cantidad: {cantidadAgregada}</p>
-    </div>
-    <div className="container col-md-6 d-flex flex-row justify-content-center px-0">
-    <Link to='/cart' className="nav-link px-3" style={{color: "#794245"}}>
-    <button className="button">Finalizar compra</button>
-    </Link>
-    <Link to='/' className="nav-link px-3" style={{color: "#794245"}}>
-    <button className="button">Seguir comprando</button>
-    </Link>
+    <div className="container col-md-6 d-flex flex-column align-items-center pt-4 py-3">
+    <div className="container col-md-12 d-flex flex-row justify-content-center align-items-center px-0">
+    <button className="button" onClick={quitarUnidad}>-</button>
+    <div className="contador fw-bold">{counter}</div>
+    <button className="button" onClick={agregarUnidad}>+</button>
+    <button className="button" onClick={() => onAdd(counter)}>Agregar al carrito</button>
     </div>
     </div>
 )}

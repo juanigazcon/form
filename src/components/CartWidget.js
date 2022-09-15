@@ -1,19 +1,16 @@
 import carrito from './Images/carrito1.png';
-import React, {useContext} from 'react';
-import { CartContext } from './CartContext';
+import React from 'react';
+
 
 
 
 const CartWidget = () => {
-const[items,setItems, total]= useContext(CartContext);
-setItems(items)
-let quantity = total();
 
 return (
-<li className="nav-item px-3">
-<img src={carrito} className="ml-5 pl-5" alt="Carrito" />  
-{quantity}
-</li>
+    
+<img src={carrito} className="ml-0 pl-5" alt="Carrito" />  
+
+
 )}
 
 export default CartWidget;
