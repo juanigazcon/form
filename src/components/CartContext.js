@@ -10,23 +10,6 @@ export const useCartContext = () => {
 const ItemsProvider = ({ children }) => {
 	const [items, setItems] = useState([]);
 
-/* const agregarAlCarrito = (item) =>{
-      let productoExistenteEnCarrito = items.some(producto => producto.id === item.id);
-      console.log(productoExistenteEnCarrito)
-
-      if(productoExistenteEnCarrito){
-		const index = items.findIndex(producto => producto.id === item.id);
-		const cantidadAnterior = items[index].cantidad 
-		//items[index].cantidad = (cantidadAnterior + item.cantidad)
-		//console.log(items)
-		items.splice(index, 1)
-        setItems([...items, {...item, cantidad: item.cantidad+cantidadAnterior}])
-      } else{
-        //items.push(item)
-        setItems([...items, {...item, cantidad: item.cantidad}])
-        console.log(items)
-      }
-} */
 
 const agregarAlCarrito = (item) => {        
 	let productoExistenteEnCarrito = items.some(producto => producto.id === item.id);
@@ -35,12 +18,9 @@ const agregarAlCarrito = (item) => {
       if(productoExistenteEnCarrito){
 		const index = items.findIndex(producto => producto.id === item.id);
 		const cantidadAnterior = items[index].cantidad 
-		//items[index].cantidad = (cantidadAnterior + item.cantidad)
-		//console.log(items)
 		items.splice(index, 1)
         setItems([...items, {...item, cantidad: item.cantidad+cantidadAnterior}])
       } else{
-        //items.push(item)
         setItems([...items, {...item, cantidad: item.cantidad}])
         console.log(items)
       }
