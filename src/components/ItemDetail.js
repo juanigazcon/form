@@ -38,19 +38,19 @@ return (
     </div>
     <div>
     {unidadesAgregadas ?
-                            <> 
-                                <ItemCount initial={0} stock={10} onAdd={cantidadAgregada} />
-                                <div className="container col-md-12 d-flex flex-column align-items-center pt-4 py-3">
-                                <div className="container col-md-12 d-flex flex-row justify-content-center align-items-center px-0">
-                                    <Link to='/'> <button className="button"> Seguir comprando </button></Link> 
-                                    <Link to='/cart'> <button className="button"> Ir al Carrito </button></Link> 
-                                </div>
-                                </div>
-                            </>
-                            : 
-                            <ItemCount initial={1} stock={10} onAdd={cantidadAgregada} />
-                        }
-                    </div>
+        <> 
+        <ItemCount initial={0} stock={10} onAdd={cantidadAgregada} />
+        <div className="container col-md-12 d-flex flex-column align-items-center pt-4 py-3">
+        <div className="container col-md-12 d-flex flex-row justify-content-center align-items-center px-0">
+            <Link to='/'> <button className="button"> Seguir comprando </button></Link> 
+            <Link to='/cart'> <button className="button"> Ir al Carrito </button></Link> 
+        </div>
+        </div>
+       </>
+      : 
+    <ItemCount initial={1} stock={10} onAdd={cantidadAgregada} />                    
+      }
+  </div>
                       
   </>
 

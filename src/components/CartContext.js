@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from "react"
+import swal from "sweetalert"
 
 export const CartContext = createContext([])
 
@@ -27,11 +28,23 @@ const agregarAlCarrito = (item) => {
 }
 
 	const eliminarProducto = (id) => {
-		setItems(items.filter((prod) => prod.id !== id))
+		swal({
+			title: 'Estás seguro de que querés eliminar el producto del carrito?',
+			buttons: ["No", "Sí"]
+		}).then( result => {
+			if (result) {
+			setItems(items.filter((prod) => prod.id !== id))
+			}})
 	} 
 
 	const vaciarCarrito = () => {
+		swal({
+			title: 'Estás seguro de que querés vaciar el carrito?',
+			buttons: ["No", "Sí"]
+		}).then( result => {
+			if (result) {
    		setItems([])
+			}})
     }
 
 const total = () => {

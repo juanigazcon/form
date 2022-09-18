@@ -68,7 +68,7 @@ return (
           </li>
           <li className="nav-item px-3">
           <Link to='/cart' className="nav-link px-3" style={{color: "#794245"}}>
-              {total()}
+              {total()!==0 && total()}
               <CartWidget />
           </Link>
           </li>
