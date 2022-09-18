@@ -28,8 +28,9 @@ const agregarAlCarrito = (item) => {
 }
 
 	const eliminarProducto = (id) => {
+		let productoEliminado = items.find(productoEliminado => productoEliminado.id === id)
 		swal({
-			title: 'Estás seguro de que querés eliminar el producto del carrito?',
+			title: 'Estás seguro de que querés eliminar todas las unidades de ' + productoEliminado.nombre + '  del carrito?',
 			buttons: ["No", "Sí"]
 		}).then( result => {
 			if (result) {
