@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail.js'
 import { useParams } from 'react-router-dom'
-import { getProductsById } from './mock.js'
 import Spinner from './Spinner.js'
+import { collection, query, getDocs, where } from 'firebase/firestore';
+import { db } from '../firebaseConfig'
+
 
 
 const ItemDetailContainer = () => {
@@ -12,15 +14,25 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     
 
+
+    const getProductsById = async (id) => {
+		const q = query(
+			collection(db, 'products'), where('id','==', id) 
+		);
+		const docs = [];
+		const querySnapshot = await getDocs(q);
+		querySnapshot.forEach((doc) => {
+			docs.push({ ...doc.data(), id: doc.id });
+		});
+		setitemDetails(docs);
+	};
+
     useEffect(() => {
     setisLoading(true);
-
+    if(id){
     getProductsById(id)
-    .then(products => {setitemDetails(products)
-    setisLoading(false);
-    })
-    .catch(error => console.error(error))
-    
+    setisLoading(false)
+        }
 
     
     }, [id])
