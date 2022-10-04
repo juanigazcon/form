@@ -82,7 +82,6 @@ cantidad: 0,
         category:  'frutales',
         image:"https://juanigazcon.github.io/storage/Images/Productos/key-lemon-pie.jpg",
         image2:'https://juanigazcon.github.io/totus-final/Images/Productos/key-lemon-pie-3.jpg',
-        descripcion:'Base de galletitas alimonadas, relleno de limón con leche condensada y topping de merengue suizo. 28 cm de diámetro- 15/20 porciones.'
     }, {
         id: '9',
         nombre: "Tarta de Frutillas",

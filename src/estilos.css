@@ -101,7 +101,11 @@ h6{
     font-family: "lexend";
     font-size: 80%;
     margin-bottom: 1%;
-
+}
+label{
+    font-weight: bolder; 
+    color:rgb(121, 66, 69);
+    font-family: "lexend";
 }
 .aside{
     grid-area: aside;
@@ -162,6 +166,14 @@ p{
     animation-duration: 1s;
     font-weight: bolder;
     font-size: 100%;
+}
+input{
+    color:dimgray;
+    font-family: "lexend";
+    animation: zoomIn;
+    animation-duration: 1s;
+    font-size: 100%;
+    text-align: center;
 }
 .button {
     font-family: "lexend";
